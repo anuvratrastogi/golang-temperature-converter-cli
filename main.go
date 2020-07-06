@@ -23,12 +23,12 @@ func main() {
 		printError(errInvalidArguments)
 	}
 
-	originUnit := strings.ToUpper(os.Args[1])
+	originUnit = strings.ToUpper(os.Args[1])
 
 	for {
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
 
-		_, err := fmt.Scanln(&originUnit)
+		_, err = fmt.Scanln(&originUnit)
 		if err != nil {
 			printError(errReadingInput)
 		}
@@ -41,9 +41,9 @@ func main() {
 
 		fmt.Print("Would you like to convert another temperature ? (y/n) ")
 
-		_, err2 := fmt.Scanln(&shouldConvertAgain)
+		_, err = fmt.Scanln(&shouldConvertAgain)
 
-		if err2 != nil {
+		if err != nil {
 			printError(errReadingInput)
 		}
 
